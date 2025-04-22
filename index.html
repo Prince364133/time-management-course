@@ -1,189 +1,212 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhruv Rathee's Time MANAGEMENT Masterclass</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Time Mastery by Dhruv Rathee</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f9fafb;
-      color: #1f2937;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow-x: hidden;
     }
-    header {
-      background: linear-gradient(to right, #6366f1, #4f46e5);
-      padding: 80px 20px;
-      color: white;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
+
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
+      max-width: 1100px;
+      margin: auto;
       padding: 20px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
-    .container h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+      border: 1px solid rgba(255,255,255,0.2);
     }
-    .features {
-      list-style: none;
-      padding-left: 20px;
-    }
-    .features li {
-      margin-bottom: 10px;
-      padding-left: 10px;
-      position: relative;
-    }
-    .features li::before {
-      content: '✔';
-      color: green;
-      position: absolute;
-      left: -20px;
-    }
-    .price {
-      font-size: 1.6rem;
-      margin: 20px 0;
-      color: #4f46e5;
-      font-weight: 700;
-    }
-    .promo {
-      margin: 20px 0;
-    }
-    .promo input {
-      padding: 10px;
-      width: 200px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    .promo button {
-      padding: 10px 20px;
-      background-color: #4f46e5;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      margin-left: 10px;
-      cursor: pointer;
-    }
-    .pay-button, .watch-button {
-      display: inline-block;
-      background: #4f46e5;
-      color: white;
-      padding: 14px 30px;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      text-decoration: none;
-      margin-top: 20px;
-    }
-    .pay-button:hover, .watch-button:hover {
-      background: #4338ca;
-    }
-    iframe.telegram {
-      width: 100%;
-      height: 500px;
-      border: none;
-      margin-top: 30px;
-      display: none;
-    }
-    footer {
+
+    h1, h2, h3 {
       text-align: center;
-      padding: 30px 10px;
-      font-size: 0.9rem;
-      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    .clock {
+      text-align: center;
+      font-size: 20px;
+      margin: 10px 0;
+      color: #ffd700;
+    }
+
+    .course-image {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .price {
+      font-size: 24px;
+      color: #90ee90;
+      font-weight: bold;
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 12px 24px;
+      margin: 10px;
+      border: 2px solid #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #4caf50;
+      border-color: #4caf50;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      width: 80%;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+      font-size: 16px;
+    }
+
+    #helpBtn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    #accessBtn, #whatsappProofBtn {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Time management Masterclass by Dhruv Rathee</h1>
-    <p>Transform your future with Time Management — now just ₹500</p>
-  </header>  <div class="container">
-    <h2>What You'll Learn</h2>
-    <ul class="features">
-      <li>8.5+ Hours of Video Content</li>
-      <li>Practical Real-world Applications of time management</li>
-      <li>100% Hindi Course with English Subtitles</li>
-      <li>Lifetime Access + Free Future Updates</li>
-    </ul><p class="price" id="priceDisplay">Price: ₹500 only</p><div class="promo">
-  <input type="text" id="promoCode" placeholder="Enter Promo Code">
-  <button onclick="applyPromoCode()">Apply</button>
-</div><a id="buyButton" class="pay-button" onclick="startPayment()">Buy Now & Get Instant Access</a> <a id="watchButton" class="watch-button" style="display:none" onclick="watchCourse()">Watch Course</a>
-<a id="whatsappBtn" class="pay-button" style="display:none; background-color: #25D366;" onclick="sendScreenshotOnWhatsApp()">Send Screenshot on WhatsApp</a>
-<iframe id="telegramContainer" class="telegram" src=""></iframe>  </div>  <footer>
-    &copy; 2025 Dhruv Rathee Courses. All rights reserved.
-</footer>  
-  
-<script>
-  let finalAmount = 50000; // in paise
-  let freeAccess = false;
+  <div class="container">
+    <div class="glass">
+      <h1>⏳ Time Management Mastery</h1>
+      <div class="clock" id="clock">⌛ Time is Ticking... Make Every Second Count</div>
+      <img src="https://www.learnaskill.io/wp-content/uploads/2023/06/Frame-76745.png" alt="Time Course" class="course-image" />
+      <p style="text-align:center; font-size: 17px;">
+        Learn to master time with <strong>Dhruv Rathee</strong>! This course transforms your mindset and productivity. Stop procrastinating and start planning smartly.⌚
+      </p>
+      <div class="price" id="price">💸 Price: ₹300</div>
 
-  function applyPromoCode() {
-    const code = document.getElementById('promoCode').value.trim().toUpperCase();
-    const priceDisplay = document.getElementById('priceDisplay');
-    const buyBtn = document.getElementById('buyButton');
-    const watchBtn = document.getElementById('watchButton');
+      <div style="text-align: center;">
+        <input type="text" id="coupon" placeholder="Enter Coupon Code" />
+        <button class="btn" onclick="applyDiscount()">Apply Code</button>
+        <div id="discounted"></div>
+      </div>
 
-    if (code === 'FREE3641') {
-      finalAmount = 0;
-      freeAccess = true;
-      priceDisplay.textContent = 'Price: ₹0 (100% discount applied)';
-      buyBtn.style.display = 'none';
-      watchBtn.style.display = 'inline-block';
-    } else if (code === 'FREE36') {
-      finalAmount = 45000;
-      freeAccess = false;
-      priceDisplay.textContent = 'Price: ₹450 (10% discount applied)';
-      buyBtn.style.display = 'inline-block';
-      watchBtn.style.display = 'none';
-    } else {
-      finalAmount = 50000;
-      freeAccess = false;
-      priceDisplay.textContent = 'Price: ₹500 only (Invalid code)';
-      buyBtn.style.display = 'inline-block';
-      watchBtn.style.display = 'none';
+      <div style="text-align: center;">
+        <button class="btn" onclick="redirectToPayment()">💳 Pay Now</button>
+        <a id="accessBtn" href="https://www.google.com/url?q=https://t.me/joinchat/4p4rcp2Lb0I1ZDY1" class="btn">📂 Access Course</a>
+        <a id="whatsappProofBtn" href="https://wa.me/916205170591?text=Hi,%20I%20have%20completed%20the%20payment%20for%20the%20Time%20Management%20Course.%20Here%20is%20my%20screenshot." class="btn">📤 Send Payment Proof</a>
+      </div>
+    </div>
+
+    <div class="glass">
+      <h2>📚 What You'll Learn</h2>
+      <ul>
+        <li>✅ Time Planning Frameworks</li>
+        <li>✅ Task Prioritization Techniques</li>
+        <li>✅ Beating Procrastination & Distractions</li>
+        <li>✅ How to Set Goals and Stick to Them</li>
+        <li>✅ Mindset & Focus Hacks</li>
+      </ul>
+    </div>
+
+    <div class="glass">
+      <h2>🕒 Course Details</h2>
+      <p><strong>Instructor:</strong> Dhruv Rathee</p>
+      <p><strong>Duration:</strong> ~2.5 Hours</p>
+      <p><strong>Language:</strong> Hindi (with English Subtitles)</p>
+      <p><strong>Access:</strong> Lifetime</p>
+    </div>
+
+    <div class="glass" style="text-align:center">
+      <h2>📞 Help & Support</h2>
+      <p>
+        For issues, contact via WhatsApp: <br />
+        <a href="https://wa.me/916205170591" style="color:#90ee90;">Chat Now</a>
+      </p>
+    </div>
+  </div>
+
+  <div id="helpBtn" onclick="window.open('https://wa.me/916205170591?text=I%20need%20help%20with%20the%20time%20management%20course.', '_blank')">
+    💬
+  </div>
+
+  <script>
+    let basePrice = 300;
+    let finalPrice = basePrice;
+
+    function applyDiscount() {
+      const code = document.getElementById("coupon").value.trim().toUpperCase();
+      let discount = 0;
+
+      if (code === "FREE222") {
+        discount = 0.2;
+      } else if (code === "FREE555") {
+        discount = 0.5;
+      } else if (code === "FREE364133") {
+        document.getElementById("accessBtn").style.display = "inline-block";
+        document.getElementById("discounted").innerHTML = "🎉 Access granted with FREE364133!";
+        return;
+      }
+
+      finalPrice = basePrice - (basePrice * discount);
+      document.getElementById("discounted").innerHTML = `🎉 Final Price: ₹${finalPrice.toFixed(2)} (${discount * 100}% OFF)`;
     }
-  }
 
-  function startPayment() {
-    const amountInRupees = finalAmount / 100;
-    const upiLink = `upi://pay?pa=6205170591@ybl&pn=ChatGPT Masterclass&am=${amountInRupees}&cu=INR&tn=Payment for ChatGPT Course`;
+    function redirectToPayment() {
+      const upiUrl = `upi://pay?pa=6205170591@ybl&pn=SnapSiksha&am=${finalPrice.toFixed(2)}&cu=INR`;
+      window.location.href = upiUrl;
 
-    // Try to open in UPI apps like PhonePe
-    window.location.href = upiLink;
+      setTimeout(() => {
+        document.getElementById("whatsappProofBtn").style.display = "inline-block";
+        alert('✅ After payment, send your screenshot on WhatsApp to get access.');
+      }, 2000);
+    }
 
-    // Show WhatsApp screenshot button
-    document.getElementById('whatsappBtn').style.display = 'inline-block';
-  }
+    function updateClock() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString();
+      document.getElementById("clock").innerText = `⌛ Current Time: ${timeStr}`;
+    }
 
-  function watchCourse() {
-    const telegramUrl = "https://www.google.com/url?q=https://t.me/%2B6G_Zt6jIfYFlMjE1&sa=U&sqi=2&ved=2ahUKEwj-ndWm_-uMAxULU2wGHV9PK2QQFnoECCAQAQ&usg=AOvVaw2LPpDZ2gOKJ65-Q1j2lTcy";
-    window.open(telegramUrl, '_blank');
-  }
-
-  function sendScreenshotOnWhatsApp() {
-    const message = encodeURIComponent("Hello, I have made the payment for the ChatGPT Masterclass. Please find the screenshot attached.");
-    const whatsappUrl = `https://wa.me/916205170591?text=${message}`;
-    window.open(whatsappUrl, '_blank');
-  }
-</script>
+    setInterval(updateClock, 1000);
+  </script>
 </body>
-
 </html>
